@@ -6,8 +6,7 @@ Usage Example: <b>./ffmpeg_randomiser.sh video_to_convert.mp4 converted_file.mkv
 
 <b>Usage printout</b><br />
 ./ffmpeg_randomiser.sh -h<br />
-NOTE: No current additional options other than in and out file.<br />
-Read the script header for more even info<br />
+Read the script header content for more even info<br />
 
 requires ffmpeg - https://ffmpeg.org<br />
 $ sudo apt install ffmpeg

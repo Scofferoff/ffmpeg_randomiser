@@ -21,13 +21,13 @@
 # Add or remove options to any of the arrays. be careful not to include options that aren't suitable for some encoders/wrappers
 # AUDIO
 a_bitrate_b_a=("96k" "128k" "192k" "256k" "320k") # bits/s
-a_codec=("copy" "flac" "aac" "ac3" "vorbis" "libvorbis")
+a_codec=("copy" "flac" "aac" "ac3")
 a_channels_ac=("1" "2") # Add more if you really want 2.1+ This is intended for Social media shares
 a_hertz_ar=("16000" "44100" "48000" "96000")
 
 # VIDEO
-v_bitrate_b_v=("copy" "350k" "700k" "1200k" "2500k" "5000k")
-v_codec=("copy" "libx264" "libx264rgb" "libx265" "libxvid" "h264_v4l2m2m") # ffmpeg -encoders
+v_bitrate_b_v=("350k" "700k" "1200k" "2500k" "5000k")
+v_codec=("libx264" "libx264rgb" "libx265" "libxvid") # ffmpeg -encoders
 v_resize_s=("hd720" "hd1080" "wxga" "wvga" "wsxga" "wuxga") # predefined video resolutions, might not work with Portrait videos?
 # ^ problematic if upscaling, but only in terms of visual quality/bluring
 v_framerate_r=("ntsc" "pal" "film" "ntsc-film") # convert framerates
@@ -35,11 +35,10 @@ v_wrapper=("mp4" "mkv") # Anything that suits the encoders, but defined in out_f
 
 # FILTERS
 f_filter_string=() # Array to hold optional filters
-f_recolor_curves=("curves=b='0/0 0.99/0.95'" "curves=r=0/0.1 0.99/1:b=0/0.1 0.99/1") # change colour values
-f_flipH_hflip=0
+f_recolor_curves=("curves=b='0/0 0.98/0.95'" "curves=r=0/0.1 0.99/1:b=0/0.1 0.99/1") # change colour values
 f_sharpen_unsharp=0 # This isn't useful but will change pixels per frame, therefore the overall content.
 # Zooming is a 2 step filter of scaling and cropping
-f_scale_crop=("scale=1.01*iw:-1,crop=iw/1.01:ih/1.01" "scale=0.99*iw:-1,crop=iw/0.99:ih/0.99") # Can simplify this by just selecting a number and inserting to final string.
+f_scale_crop=("scale=1.02*iw:-1,crop=iw/1.02:ih/1.02" "scale=0.98*iw:-1,crop=iw/0.98:ih/0.98") # Can simplify this by just selecting a number and inserting to final string.
 
 # GENERAL SETTINGS
 fixed_size_fs="0" # 0 or 1: Generate a file of fixed size, NOT IDEAL FOR THIS SITUATION
